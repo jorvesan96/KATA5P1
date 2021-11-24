@@ -12,7 +12,7 @@ public class SelectApp {
             Connection conn = null;
             try{
                 conn = DriverManager.getConnection(url);
-                System.out.println("Conexión a SQLite establecida");
+                System.out.println("Conexión a SQLite establecida, procediendo a la seleccion de datos");
             }catch(SQLException e){System.out.println(e.getMessage());
 
             }
