@@ -23,8 +23,10 @@ public class KATA5P1 {
         }
         
        InsertData data = new InsertData();
+
         for (String string : email) {
             data.insert(string);
         }
+
     }
 }
