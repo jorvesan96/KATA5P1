@@ -8,16 +8,16 @@ import java.sql.SQLException;
 
 public class InsertData {
     private Connection connect(){
-            String url = "jdbc:sqlite:KATA5.db";
-            Connection conn = null;
-            try{
-                conn = DriverManager.getConnection(url);
-                System.out.println("Conexión a SQLite establecida, procediendo a la insercion de nuevos datos");
-            }catch(SQLException e){System.out.println(e.getMessage());
+        String url = "jdbc:sqlite:KATA5.db";
+        Connection conn = null;
+        try{
+            conn = DriverManager.getConnection(url);
+            System.out.println("Conexión a SQLite establecida, procediendo a la insercion de nuevos datos");
+        }catch(SQLException e){System.out.println(e.getMessage());
 
-            }
-            return conn;
         }
+        return conn;
+    }
     public void insert(String email){
         String sentence = "INSERT INTO direcc_email(direccion) VALUES(?)";
         try(Connection conn = this.connect();

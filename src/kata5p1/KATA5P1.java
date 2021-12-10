@@ -23,8 +23,8 @@ public class KATA5P1 {
         }
         
        InsertData data = new InsertData();
-       data.insert("abc@ulpgc.es");
-       data.insert("xyz@ull.es");
-       data.insert("def123@gmail.com");
+        for (String string : email) {
+            data.insert(string);
+        }
     }
 }
