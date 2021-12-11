@@ -7,17 +7,17 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class SelectApp {
-        private Connection connect(){
-            String url = "jdbc:sqlite:KATA5.db";
-            Connection conn = null;
-            try{
-                conn = DriverManager.getConnection(url);
-                System.out.println("Conexión a SQLite establecida, procediendo a la seleccion de datos");
-            }catch(SQLException e){System.out.println(e.getMessage());
+    private Connection connect(){
+        String url = "jdbc:sqlite:KATA5.db";
+        Connection conn = null;
+        try{
+            conn = DriverManager.getConnection(url);
+            System.out.println("Conexión a SQLite establecida, procediendo a la seleccion de datos");
+        }catch(SQLException e){System.out.println(e.getMessage());
 
-            }
-            return conn;
         }
+        return conn;
+    }
     public void instruction(){
         String sql = "SELECT * FROM PEOPLE";
         try(Connection conn = this.connect();

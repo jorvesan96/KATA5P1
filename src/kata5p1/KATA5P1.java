@@ -1,6 +1,5 @@
 package kata5p1;
 
-import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 import static kata5p1.MailListReader.read;
@@ -15,7 +14,7 @@ public class KATA5P1 {
         tabla.createNewTable();
         
         String filePath = "email.txt";
-        List<String> email = new ArrayList<String>();
+        List<String> email = new ArrayList<>();
         try {
             email = read(filePath);
         }catch(Exception e){
